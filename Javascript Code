@@ -1,0 +1,132 @@
+$(document).ready(function(){
+ // var number=["1","2","3"];
+  
+  var firstNumber="";
+  var secondNumber="";
+  var answer="";
+  var operator="";
+  var firstNumberArray=[];
+  var secondNumberArray=[];
+
+  $("#clearButton").on("click",function(){ //reset button function sets everything equal to zero
+    $("#liveNumberInput").html("");
+    $("#numberInput").html("0");
+    firstNumber="";
+    secondNumber="";
+    answer="";
+    operator="";
+    firstNumberArray=[];
+    secondNumberArray=[];
+  });
+
+  $("#addButton").on("click",function(){ //if add button is pressed
+    $("#liveNumberInput").append("+"); //print + to display
+    if(operator===""){
+      operator="+";
+    }
+    else if(operator!=="")
+      {
+        console.log(answer);
+        secondNumber="";
+        secondNumberArray=[];
+        operator="+";
+      }
+  });
+
+  $("#subtractButton").on("click",function(){ //if subtract button is pressed
+    $("#liveNumberInput").append("-");
+    if(operator===""){ //if operator is empty
+      operator="-";
+    }
+    else if(operator!=="")
+      {
+        firstNumber=answer;
+        secondNumber="";
+        secondNumberArray=[];
+        operator="-";
+      }
+  });
+
+  $("#multiplyButton").on("click",function(){ //if multiply button is pressed
+    $("#liveNumberInput").append("x");
+    if(operator==="")
+      {
+        operator="x";
+      }
+    else if(operator!=="")
+      {
+        firstNumber=answer;
+        secondNumber="";
+        secondNumberArray=[];
+        operator="x";
+      }
+  });
+
+  $("#divideButton").on("click",function(){ //if divide button is pressed
+    $("#liveNumberInput").append("÷");
+    if(operator==="")
+      {
+        operator="÷"
+      }
+    else if(operator!=="")
+      {
+        firstNumber=answer;
+        secondNumber="";
+        secondNumberArray=[];
+        operator="÷";
+      }
+  });
+
+  $(".btn-default").on("click",function(){
+    if(operator==="")
+    {
+      firstNumberArray.push($(this).html()); //push the button value to array
+      $("#liveNumberInput").append($(this).html());//display number      
+    }
+    else if(operator!=="") //if there is a opearator before, triggers code for second number
+    {
+      secondNumberArray.push($(this).html()); //push button value to array
+      $("#liveNumberInput").append($(this).html());
+    }
+    
+  });
+
+  function solveForAnswer(firstValue,secondValue,operatorUsed)
+  {
+    if(operatorUsed==="+")
+    {
+      answer=firstValue+secondValue;
+    }
+    else if(operatorUsed==="-")
+    {
+      answer=firstValue-secondValue;
+    }
+    else if(operatorUsed==="x")
+    {
+      answer=firstValue*secondValue;
+    }
+    else if(operatorUsed==="÷")
+    {
+      answer=firstValue/secondValue;
+    }
+  }
+
+$("#equalButton").on("click",function(){
+  if(answer==="")
+    {
+  firstNumber=firstNumberArray.join(""); //join the numbers
+  firstNumber=parseInt(firstNumber);
+    }
+  else if(answer!=="")
+    {
+      firstNumber=answer;
+    }
+  secondNumber=secondNumberArray.join(""); //join the numbers
+  secondNumber=parseInt(secondNumber);
+
+solveForAnswer(firstNumber,secondNumber,operator);
+$("#numberInput").html(answer); 
+
+});
+  
+});
