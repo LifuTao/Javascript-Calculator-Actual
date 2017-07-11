@@ -1,0 +1,58 @@
+<!-- color scheme creds:https://www.awwwards.com/sites/true-digital-->
+<link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+
+<div id="calculatorBody" class="container"><h3 id="calculatorNameTag" class="text-center">Lifu's Calculator</h3>
+  <div id="numberDisplay">
+    <p id="numberInput" class="text-align-right">0</p>
+    <div id="liveNumberInput">Live Number Input</div>
+  </div>
+  <div id="buttonSet">
+    <div id="firstRow"> <!-- code for first row -->
+      <div class="row">
+        <div class="col-md-3"><button class="btn-danger" id="clearButton">AC</button></div>
+        <div class="col-md-3"><button class="btn-warning" id="clearEntryButton">CE</button></div>
+        <div class="col-md-3"><button class="btn" id="divideButton">÷</button></div>
+        <div class="col-md-3"><button class="btn" id="multiplyButton">X</button></div>      
+        </div>
+    </div>
+    <div id="secondRow"> <!-- code for second row -->
+      <div class="row">
+        <div class="col-md-3"><button class="btn-default" id="sevenButton">7</button></div>
+        <div class="col-md-3"><button class="btn-default" id="eightButton">8</button></div>
+        <div class="col-md-3"><button class="btn-default" id="nineButton">9</button></div>
+        <div class="col-md-3"><button class="btn" id="subtractButton">-</button></div>       
+      </div>
+    </div>
+    <!-- code for third row -->
+    <div id="thirdRow">
+      <div class="row">
+        <div class="col-md-3"><button class="btn-default" id="fourButton">4</button></div>
+        <div class="col-md-3"><button class="btn-default" id="fiveButton">5</button></div>
+        <div class="col-md-3"><button class="btn-default" id="sixButton">6</button></div>
+        <div class="col-md-3"><button class="btn" id="addButton">+</button></div>        
+      </div>
+    </div>
+    <!-- code for 4th row -->
+    <div id="fourthRow">
+      <div class="row">
+        <div class="col-md-3"><button class="btn-default" id="oneButton">1</button></div>
+        <div class="col-md-3"><button class="btn-default" id="twoButton">2</button></div>
+        <div class="col-md-3"><button class="btn-default" id="threeButton">3</button></div>
+        <div class="col-md-3"><button class="btn-success" id="equalButton">=</buttoon</div>        
+      </div>
+      </div>
+        <div id="fifthRow">
+          <div class="row">
+            <div class="col-md-6"><button class="btn-default" id="zeroButton">0</button></div>
+            <div class="col-md-3"><button class="btn-default" id="decimalButton">.</button></div>
+          </div>
+        </div>
+        
+          
+    
+  </div>
+    </div>
+    <body background="https://images.template.net/wp-content/uploads/2016/03/28091004/Abstract-Dark-Geometric-Background-Download.jpg"></body>
+    
+   <!-- background picture URL :https://images.template.net/wp-content/uploads/2016/03/28091004/Abstract-Dark-Geometric-Background-Download.jpg -->
+      
